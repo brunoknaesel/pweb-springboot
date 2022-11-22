@@ -16,8 +16,8 @@ public class Aula {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private Integer id;
-	@Column(name = "tipoAula")
-	private boolean tipoAula;
+	private boolean ehPratica;
+	private boolean ehTeorica;
 //	@Column(name = "aluno")
 //	private Usuario alunoAula;
 	@Column(name = "categoria")
@@ -26,6 +26,17 @@ public class Aula {
 	private String instrutor;
 	@Column(name = "data")
 	private Date data;
+
+	
+	
+	public Aula(boolean ehPratica, boolean ehTeorica, String categoria, String instrutor, Date data) {
+		super();
+		this.ehPratica = ehPratica;
+		this.ehTeorica = ehTeorica;
+		this.categoria = categoria;
+		this.instrutor = instrutor;
+		this.data = data;
+	}
 
 	public int getId() {
 		return id;
@@ -43,16 +54,24 @@ public class Aula {
 //		this.alunoAula = alunoAula;
 //	}
 
-	public boolean getTipoAula() {
-		return tipoAula;
-	}
-
-	public void setTipoAula(boolean tipoAula) {
-		this.tipoAula = tipoAula;
-	}
-
 	public String getCategoria() {
 		return categoria;
+	}
+
+	public boolean isEhPratica() {
+		return ehPratica;
+	}
+
+	public void setEhPratica(boolean ehPratica) {
+		this.ehPratica = ehPratica;
+	}
+
+	public boolean isEhTeorica() {
+		return ehTeorica;
+	}
+
+	public void setEhTeorica(boolean ehTeorica) {
+		this.ehTeorica = ehTeorica;
 	}
 
 	public void setCategoria(String categoria) {
