@@ -1,0 +1,120 @@
+<style></style>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="css/index.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap"
+	rel="stylesheet">
+</head>
+
+
+<body>
+	<header>
+		<div class="logoCarro">
+			<img src="Imagens/LogoCarro.png" alt="" width="140">
+		</div>
+
+		<div class="textosHeader">
+			<nav>
+				<a id="pagInicial" class="alinhaHeader">Página Inicial</a> <a
+					id="txtSobre" class="alinhaHeader" href="sobre.html">Sobre</a> <a
+					id="txtLocalizacao" class="alinhaHeader">Localização</a> <a
+					id="txtContato " class="alinhaHeader">Contato</a>
+			</nav>
+		</div>
+
+		<div class="botoes">
+			<a href="index.html" style="text-decoration: none">
+				<button class="botaoEntrar" type="button">Entrar</button>
+			</a> <a th:href="cadastrar.html" style="text-decoration: none">
+				<button class="botaoCadastrar" type="button">Cadastrar</button>
+			</a>
+		</div>
+	</header>
+
+	<main>
+		<div class="principal">
+
+			<div class="formulario">
+				<form action="#">
+					<div class="formularioHeader">
+						<div class="titulos">
+							<h1 class="titulo">Seja Bem-Vindo</h1>
+
+							<h3 class="subTitulo">         Por favor insira seus dados</h3>
+						</div>
+
+					</div>
+
+					<div class="grupoInputs">
+
+						<div class="caixaInputs">
+							<label for="email">E-mail</label> <input id="email" type="email"
+								name="email" placeholder="Por favor insira seu e-mail" required>
+						</div>
+
+						<div class="caixaInputs">
+							<label for="password">Senha</label> <input id="password"
+								type="password" name="password"
+								placeholder="Por favor insira sua senha" required>
+						</div>
+
+					</div>
+
+					<div class="lembrarEsquecer">
+						<div class="checkBoxs">
+							<input type="checkbox" id="lembrar" name="lembrar"> <label
+								for="lembrar">  Lembrar-me                 </label>
+						</div>
+
+						<div class="esqueciSenha">
+							<a class="esqueciSenha" href="esqueceusenha.html"
+								style="text-decoration: none">Esqueceu sua senha?</a>
+						</div>
+					</div>
+
+					<div class="botaoEntrarForms">
+						<button>Entrar</button>
+					</div>
+
+				</form>
+
+				<div class="divBotaoGoogle">
+					<button class="botaoEntrarGmail">
+						<img src="Imagens/LogoGoogle.png" alt="" width="20">  Entrar
+						com o Google
+					</button>
+				</div>
+
+				<div class="naoTemConta">
+					<h3>
+						Não tem uma conta? <a class="botaoIrCadastrar"
+							href="cadastrar.html" style="text-decoration: none">Cadastrar</a>
+					</h3>
+				</div>
+
+			</div>
+
+
+			<img class="fundoForms" src="Imagens/FundoForms.png" alt="">
+
+		</div>
+	</main>
+
+	<footer>
+		<div>
+			<img src="Imagens/LogoAutoescola.png" alt="" width="84">
+		</div>
+		<div class="nomesAlunos">
+			<h3>Bruno Hugo Knaesel, Elaine Martina André e Yuri Trierveiler</h3>
+		</div>
+	</footer>
+
+</body>
+
+</html>
