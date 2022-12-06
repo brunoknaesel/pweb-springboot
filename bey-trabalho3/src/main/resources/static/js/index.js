@@ -1,39 +1,49 @@
-function validate() {
-	let radioPratica = document.forms["formulario"]["pratica"].value;
-	let categoria = document.forms["formulario"]["categoria"].value;
-	let instrutores = document.forms["formulario"]["instrutores"].value;
-	let dataaula = document.forms["formulario"]["dataaula"].value;
-	let horarios = document.forms["formulario"]["horarios"].value;
-	var resposta = "Favor preencher: \n\r";
+const formulario = document.getElementById("formularioAula");
+const botao = document.getElementById("botaoAgendar");
+const itipoAula = document.getElementById("tipoAula");
+const icategoria = document.getElementById("categoria");
+const iinstrutor = document.getElementById("instrutor");
+const idataAula = document.getElementById("dataAula");
+const ihorarioAula = document.getElementById("horarioAula");
 
-	if (radioPratica == "" || categoria == "selecione" || instrutores == "selecione" || dataaula == "" || horarios == "selecione") {
+function cadastrar() {
+	fetch("http://localhost:8087/aulas",
+		{
+			headers: {
+				"Accept": "application/json",
+				"Content-Type": "application/json"
+			},
+			method: "POST",
+			body: JSON.stringify({
+				tipoAula: itipoAula.value,
+				categoria: icategoria.value,
+				instrutor: iinstrutor.value,
+				dataAula: idataAula.value,
+				horarioAula: ihorarioAula.value
+			})
 
-		if (radioPratica == "") {
-			resposta += "• Tipo aula\n";
-		}
-		if (categoria == "selecione") {
-			resposta += "• Categoria\n";
-		}
-		if (instrutores == "selecione") {
-			resposta += "• Instrutor\n";
-		}
-		if (dataaula == "") {
-			resposta += "• Data da aula\n";
-		}
+		})
+		.then(function(res) { console.log(res), alert("Aula cadastrada com sucesso") })
+		.catch(function(res) { console.log(res) })
+}
 
-		if (horarios == "selecione") {
-			resposta += "• Horário da aula\n";
-		}
-		alert(resposta);
-		return false;
+function limpar() {
+	itipoAula.value = "",
+		icategoria.value = "",
+		iinstrutor.value = "",
+		idataAula.value = "",
+		ihorarioAula.value = ""
+}
+
+formulario.addEventListener("submit", function(event) {
+	event.preventDefault();
+	if (itipoAula.value != "" && icategoria.value != "" && iinstrutor.value != "" &&
+		idataAula.value != "" && ihorarioAula.value != "") {
+
+		cadastrar();
+		limpar();
 	}
-};
-
-$(document).ready(function() {
-
-	$('.subMenuBtn').click(function() {
-		$(this).next('.subMenuConteudo').slideToggle();
-		$(this).find('.dropdown').toggleClass('girar');
-	});
-
+	else {
+		alert("Todos os campos devem serem preenchidos para agendar a aula!")
+	}
 });

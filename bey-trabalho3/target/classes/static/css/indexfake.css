@@ -1,0 +1,236 @@
+@charset "ISO-8859-1";
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Inter', sans-serif;
+}
+
+input[type=checkbox] {
+	transform: scale(0.74);
+}
+
+header {
+	width: 100%;
+	height: 7%;
+	background-color: #8B0D32;
+	display: flex;
+	align-items: center;
+}
+
+.botaoEntrar {
+	font-size: 15px;
+	font-family: 'Inter', sans-serif;
+	width: 120px;
+	height: 40px;
+	color: #8B0D32;
+	border: 2px solid #fff;
+	font-weight: bold;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	background: #fff;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.botaoCadastrar {
+	font-size: 15px;
+	font-family: 'Inter', sans-serif;
+	width: 120px;
+	height: 40px;
+	background: #8B0D32;
+	border: 2px solid #fff;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.principal {
+	width: 100%;
+	height: 87%;
+	background-color: rgb(247, 217, 222);
+	background-image: url(Imagens/FundoPlacas.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	display: flex;
+	align-items: center;
+}
+
+.logoCarro {
+	padding-right: 90px;
+	padding-left: 30px;
+	max-width: 15%;
+	display: inline-block;
+}
+
+.textosHeader {
+	max-width: 55%;
+	padding-right: 220px;
+	display: inline-block;
+	color: #fff;
+}
+
+.textosHeader a {
+	text-decoration: none;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+}
+
+.botoes {
+	padding-right: 20px;
+	max-width: 30%;
+	display: inline-block;
+	margin-left: 350px;
+}
+
+.alinhaHeader {
+	padding-right: 120px;
+}
+
+footer {
+	width: 100%;
+	height: 6%;
+	background-color: #f5f5f5;
+	display: flex;
+	align-items: center;
+}
+
+.nomesAlunos {
+	padding-left: 72%;
+	color: #333333;
+}
+
+.nomesAlunos h3 {
+	font-size: 15px;
+}
+
+.fundoForms {
+	width: 17%;
+	height: 70%;
+	display: flex;
+	align-items: center;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+.grupoInputs {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.caixaInputs {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
+	font-size: 13px;
+	color: gray;
+}
+
+.formulario {
+	width: 17%;
+	height: 70%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fff;
+	padding: 3rem;
+	margin-left: 32%;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+
+.formularioHeader {
+	margin-bottom: 3rem;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 35%;
+}
+
+.titulos {
+	margin-right: 10%;
+	margin-left: 10%;
+}
+
+.titulo {
+	font-size: 23px;
+}
+
+.subTitulo {
+	font-size: 10px;
+}
+
+.botaoEntrarForms button {
+	width: 100%;
+	height: 9%;
+	border: solid;
+	border-width: 1px;
+	border-color: gray;
+	background-color: #8B0D32;
+	padding: 10px;
+	border-radius: 8px;
+	cursor: pointer;
+	color: white;
+	font-size: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.botaoEntrarGmail {
+	width: 100%;
+	height: 59%;
+	border: solid;
+	border-width: 1px;
+	border-color: gray;
+	background-color: white;
+	padding: 10px;
+	border-radius: 8px;
+	cursor: pointer;
+	color: black;
+	margin-top: 3%;
+	font-size: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.naoTemConta h3 {
+	font-size: 12px;
+}
+
+.botaoIrCadastrar {
+	font-size: 12px;
+	color: #8B0D32;
+}
+
+.checkBoxs {
+	margin-bottom: 5%;
+	font-size: 10px;
+	color: gray;
+	display: flex;
+	justify-content: start;
+	text-align: left;
+}
+
+.esqueciSenha {
+	color: #8B0D32;
+	font-size: 10px;
+	text-align: right;
+}
+
+.lembrarEsquecer {
+	display: flex;
+}
+
+.divBotaoGoogle {
+	width: 100%;
+}

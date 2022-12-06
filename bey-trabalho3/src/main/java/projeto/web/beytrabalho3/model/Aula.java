@@ -7,6 +7,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Column;
 
 @Entity
@@ -16,33 +19,21 @@ public class Aula {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private Integer id;
-	private boolean ehPratica;
-	private boolean ehTeorica;
-//	@Column(name = "aluno")
-//	private Usuario alunoAula;
+	private String tipoAula;
 	@Column(name = "categoria")
 	private String categoria;
 	@Column(name = "instrutor")
 	private String instrutor;
-	@Column(name = "data")
-	private Date data;
+	@Column(name = "dataAula")
+	private Date dataAula;
 
-	
-	
-	public Aula(boolean ehPratica, boolean ehTeorica, String categoria, String instrutor, Date data) {
-		super();
-		this.ehPratica = ehPratica;
-		this.ehTeorica = ehTeorica;
-		this.categoria = categoria;
-		this.instrutor = instrutor;
-		this.data = data;
-	}
+	private String horarioAula;
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -54,24 +45,24 @@ public class Aula {
 //		this.alunoAula = alunoAula;
 //	}
 
+	public String getHorarioAula() {
+		return horarioAula;
+	}
+
+	public String getTipoAula() {
+		return tipoAula;
+	}
+
+	public void setTipoAula(String tipoAula) {
+		this.tipoAula = tipoAula;
+	}
+
+	public void setHorarioAula(String horarioAula) {
+		this.horarioAula = horarioAula;
+	}
+
 	public String getCategoria() {
 		return categoria;
-	}
-
-	public boolean isEhPratica() {
-		return ehPratica;
-	}
-
-	public void setEhPratica(boolean ehPratica) {
-		this.ehPratica = ehPratica;
-	}
-
-	public boolean isEhTeorica() {
-		return ehTeorica;
-	}
-
-	public void setEhTeorica(boolean ehTeorica) {
-		this.ehTeorica = ehTeorica;
 	}
 
 	public void setCategoria(String categoria) {
@@ -86,11 +77,11 @@ public class Aula {
 		this.instrutor = instrutor;
 	}
 
-	public Date getData() {
-		return data;
+	public Date getDataAula() {
+		return dataAula;
 	}
 
-	public void setData(Date data) {
-		this.data = data;
+	public void setDataAula(Date data) {
+		this.dataAula = data;
 	}
 }

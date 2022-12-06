@@ -1,0 +1,362 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Inter', sans-serif;
+	text-decoration: none;
+}
+
+header {
+	width: 100%;
+	height: 7%;
+	background-color: #8B0D32;
+	display: flex;
+	align-items: center;
+}
+
+.logoCarroHeader {
+	padding-right: 90px;
+	padding-left: 30px;
+	max-width: 15%;
+	display: inline-block;
+}
+
+.alinhaHeader {
+	padding-right: 120px;
+}
+
+.textosHeader a {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+}
+
+.textosHeader li {
+	align-items: center;
+	display: inline;
+	justify-content: center;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+}
+
+.barraPesquisaHeader {
+	border-radius: 16px;
+	border: none;
+	width: 250px;
+	height: 25px;
+}
+
+.barraPesquisaHeader button {
+	background-color: #8B0D32;
+	border: none;
+	color: white;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.infoUsuario {
+	margin-left: 22%;
+}
+
+.infoUsuario h1 {
+	font-size: 16px;
+	color: white;
+	font-weight: bold;
+}
+
+.infoUsuario a {
+	font-size: 12px;
+	color: white;
+	font-weight: unset;
+	background-color: #8B0D32;
+	border: none;
+}
+
+.infoUsuario button {
+	border: none;
+}
+
+.usuarioLogo {
+	margin-left: 40%;
+}
+
+.main {
+	width: 100%;
+	height: 87%;
+	background-size: 100% 100%;
+	display: flex;
+}
+
+.menuLateral {
+	overflow: hidden;
+	background-color: #EFCED8;
+	width: 14%;
+}
+
+.menu {
+	width: 100%;
+}
+
+.itens {
+	position: relative;
+	cursor: pointer;
+	/*Colocar m�o do navegador*/
+}
+
+.itens a {
+	background-color: #8B0D32;
+	color: #fff;
+	font-size: 14px;
+	text-decoration: none;
+	display: block;
+	padding: 5px 30px;
+	line-height: 43px;
+	border-radius: 12px;
+	margin-top: 4%;
+}
+
+.itens a:hover {
+	background: rgb(84, 42, 56);
+	transition: 0.3s ease;
+	color: white;
+}
+
+.itens i {
+	margin-right: 15px;
+}
+
+.itens a .dropdown {
+	position: absolute;
+	right: 0;
+	margin: 20px;
+	transition: 0.3s ease;
+	margin-top: 6%;
+}
+
+.subMenuConteudo {
+	background: rgba(255, 255, 255, 0.1);
+	display: none;
+}
+
+.subMenuConteudo a {
+	padding-left: 80px;
+	background-color: #EFCED8;
+	color: #8B0D32;
+}
+
+.girar {
+	transform: rotate(90deg);
+}
+
+.principal {
+	background-color: rgb(247, 217, 222);
+	width: 86%;
+	height: 100%;
+}
+
+.principalLogo {
+	width: 100%;
+	height: 31%;
+	background-color: rgb(247, 217, 222);
+	background-image: url(Imagens/FundoPlacas.png);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 1px solid #8B0D32;
+}
+
+.principalAgendamento {
+	width: 100%;
+	height: 63.2%;
+	background-color: rgb(247, 217, 222);
+}
+
+.agendarAulas {
+	width: 84%;
+	height: 48%;
+	background-color: white;
+	border-radius: 30px;
+	margin-left: 8%;
+	margin-right: 8%;
+	margin-top: 1.5%;
+}
+
+form {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tituloForm {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #8B0D32;
+	width: 25%;
+	height: 12%;
+	border-radius: 8px;
+	margin-left: 37%;
+}
+
+.tituloForm h2 {
+	font-size: 18px;
+	color: white;
+}
+
+select {
+	overflow-y: auto;
+	text-align: start;
+	width: 110px;
+}
+
+.formDataPicker {
+	width: 20%;
+	color: #8B0D32;
+	font-size: 12px;
+}
+
+.formDataPicker p {
+	margin-bottom: 20%;
+	font-size: 16px;
+	color: #8B0D32;
+	margin-top: 8%;
+}
+
+.formHorario {
+	width: 20%;
+	color: #8B0D32;
+	font-size: 12px;
+}
+
+.tabelaAulas {
+	width: 91.2%;
+	height: 22%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tabelaAulas thead {
+	background-color: #8B0D32;
+	color: white;
+}
+
+.formTipoAula {
+	width: 18%;
+	color: #8B0D32;
+	font-size: 12px;
+	margin-bottom: 100;
+}
+
+.formTipoAula p {
+	margin-bottom: 20%;
+	font-size: 16px;
+	color: #8B0D32;
+	margin-top: 12%;
+}
+
+.radioPratica {
+	width: 99%;
+}
+
+.radioTeorica {
+	width: 100%;
+}
+
+.formItens {
+	width: 18%;
+	color: #8B0D32;
+	font-size: 12px;
+	margin-bottom: 100;
+}
+
+.formItens p {
+	margin-bottom: 20%;
+	font-size: 16px;
+	color: #8B0D32;
+	margin-top: 8%;
+}
+
+.formItens input {
+	color: #8B0D32;
+}
+
+.formItens select {
+	color: #8B0D32;
+}
+
+.botoesAgendamentoForm {
+	width: 10%;
+	display: inline-block;
+}
+
+.botaoAgendarForm {
+	color: white;
+	background-color: #8B0D32;
+	border-radius: 8px;
+	font-weight: bold;
+	cursor: pointer;
+	width: 80px;
+	height: 27px;
+	border: none;
+	margin-top: 90%;
+}
+
+.botaoLimparForm {
+	color: rgb(116, 113, 113);
+	background-color: white;
+	border-radius: 8px;
+	font-weight: bold;
+	cursor: pointer;
+	width: 80px;
+	height: 27px;
+	border: none;
+	text-decoration: underline;
+}
+
+thead {
+	font-size: 16px;
+	font-weight: bold;
+	height: 40px;
+}
+
+table {
+	font-size: 13px;
+	height: 220px;
+	margin-top: 12%;
+	margin-left: 10%;
+}
+
+td {
+	width: 260px;
+	text-align: center;
+}
+
+.linhaRosada {
+	background-color: #EFCED8;
+	color: #8B0D32;
+}
+
+.linhaBranquinha {
+	background-color: white;
+	color: #8B0D32;
+}
+
+footer {
+	width: 100%;
+	height: 6%;
+	background-color: #f5f5f5;
+	display: flex;
+	align-items: center;
+}
+
+.nomesAlunosFooter {
+	padding-left: 72%;
+	color: #333333;
+}
+
+.nomesAlunosFooter h3 {
+	font-size: 15px;
+}

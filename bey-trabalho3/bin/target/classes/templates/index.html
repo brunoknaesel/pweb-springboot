@@ -1,0 +1,265 @@
+<style></style>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8" />
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+	charset="UTF-8"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<link href="css/index.css" type="text/css" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap"
+	rel="stylesheet">
+<script src="https://kit.fontawesome.com/db04ddea4b.js"></script>
+</head>
+
+<body>
+	<header>
+		<div class="logoCarroHeader">
+			<img src="Imagens/LogoCarro.png" alt="" width="140">
+		</div>
+
+		<div class="textosHeader">
+			<ul>
+				<li class="alinhaHeader">Página inicial</li>
+				<li class="alinhaHeader"><a href="sobre.html">Sobre</a></li>
+				<li class="alinhaHeader">Localização</li>
+				<li class="alinhaHeader">Contato</li>
+			</ul>
+		</div>
+
+		<div class="barraPesquisaHeader">
+			<form action="#">
+				<input class="barraPesquisaHeader" type="text"
+					placeholder="  Pesquisar..." name="search">
+				<button type="submit">
+					<i class="fa fa-search"></i>
+				</button>
+			</form>
+		</div>
+
+		<div class="infoUsuario">
+			<h1>   Olá Laura</h1>
+			<button>
+				<a href="#">Minha conta</a>
+			</button>
+			<button>
+				<a href="index.html">Sair</a>
+			</button>
+		</div>
+		<div>
+			<img class="usuarioLogo" src="Imagens/laura.png" width="41" />
+		</div>
+
+	</header>
+
+	<main>
+		<div class="main">
+
+			<div class="menuLateral">
+				<div class="menu">
+					<div class="itens">
+						<a class="subMenuBtn"> <i class="fas fa-user"></i>Dados
+							pessoais<i class="fas fa-angle-right dropdown"></i>
+						</a>
+						<div class="subMenuConteudo">
+							<a href="#" class="subItens">Aluno</a> <a href="#"
+								class="subItens">Frequência</a>
+						</div>
+					</div>
+					<div class="itens">
+						<a class="subMenuBtn"> <i class="fas fa-car"></i>Aulas<i
+							class="fas fa-angle-right dropdown"></i>
+						</a>
+						<div class="subMenuConteudo">
+							<a href="#" class="subItens">Agendamento</a> <a href="#"
+								class="subItens">Consulta</a>
+						</div>
+					</div>
+					<div class="itens">
+						<a class="subMenuBtn"> <i class="fas fa-book-open"></i>Conteúdos<i
+							class="fas fa-angle-right dropdown"></i>
+						</a>
+						<div class="subMenuConteudo">
+							<a href="#" class="subItens">Material</a> <a href="#"
+								class="subItens">Video-aulas</a>
+						</div>
+					</div>
+					<div class="itens">
+						<a class="subMenuBtn"> <i class="fas fa-book"></i>Avaliações<i
+							class="fas fa-angle-right dropdown"></i>
+						</a>
+						<div class="subMenuConteudo">
+							<a href="#" class="subItens">Provas</a> <a href="#"
+								class="subItens">Notas</a>
+						</div>
+					</div>
+					<div class="itens">
+						<a><i class="fa-solid fa-person-chalkboard"></i>Instrutores</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="principal">
+				<!--Header com Logo e fundo placas-->
+				<div class="principalLogo">
+
+					<div>
+						<img src="Imagens/LogoAutoescola.png" alt="" width="300">
+					</div>
+				</div>
+
+				<div class="principalAgendamento">
+					<!--Caixa Agendamento-->
+					<div class="agendarAulas">
+						<div class="tituloForm">
+							<h2>Agendamento de Aulas</h2>
+						</div>
+
+						<form action="#" th:action="@{/createaula}" th:object="${aula}"
+							method="post">
+							<!--Tipo Aula-->
+							<div class="formTipoAula">
+								<p>Tipo Aula</p>
+								<div class="radioPratica">
+									<input type="radio" name="ehPratica" th:value="${aula?.ehPratica}"> <label for="pratica">Prática</label>
+								</div>
+								<div class="radioTeorica">
+									<input type="radio" id="pratica" name="ehTeorica" th:value="${aula?.ehTeorica}"
+										value="Teorica"> <label for="teorica">Teórica</label>
+								</div>
+							</div>
+
+							<!--Categoria-->
+							<div class="formItens">
+								<p>Categoria</p>
+								<select name="categoria" id="categoria"  
+									<option value="selecione">Selecione</option>
+									<option value="a">Categoria A</option>
+									<option value="b">Categoria B</option>
+									<option value="c">Categoria C</option>
+									<option value="d">Categoria D</option>
+								</select>
+							</div>
+
+							<!--Instrutor-->
+							<div class="formItens">
+								<p>Instrutor</p>
+								<select name="instrutor" id="instrutores">
+									<option value="selecione">Selecione</option>
+									<option value="bruno">Bruno H</option>
+									<option value="elaine">Elaine M</option>
+									<option value="yuri">Yuri T</option>
+								</select>
+							</div>
+
+							<!--Data-->
+							<div class="formItens">
+								<p>Data</p>
+								<input type="date" id="dataaula" name="dataAula">
+							</div>
+
+							<!--Horários-->
+							<div class="formItens">
+								<p>Horários Disponíveis</p>
+								<select name="horario" id="horarios">
+									<option value="selecione">Selecione</option>
+									<option value="8horas">08:00</option>
+									<option value="9horas">09:00</option>
+									<option value="10horas">10:00</option>
+									<option value="11horas">11:00</option>
+									<option value="13horas">13:00</option>
+									<option value="14horas">14:00</option>
+									<option value="15horas">15:00</option>
+									<option value="16horas">16:00</option>
+									<option value="17horas">17:00</option>
+									<option value="18horas">18:00</option>
+									<option value="19horas">19:00</option>
+									<option value="20horas">20:00</option>
+								</select>
+							</div>
+
+							<div class="botoesAgendamentoForm">
+								<input class="botaoLimparForm" type="reset" value="Limpar" /> <input
+									class="botaoAgendarForm" type="submit" value="Agendar" />
+							</div>
+						</form>
+					</div>
+
+					<!--Tabela Aulas-->
+					<div class="tabelaAulas">
+						<table>
+							<thead>
+								<tr>
+									<th>Aula</th>
+									<th>Tipo Aula</th>
+									<th>Categoria</th>
+									<th>Instrutor</th>
+									<th>Data</th>
+									<th>Horário</th>
+								</tr>
+							</thead>
+							<tr class="linhaRosada">
+								<td>Aula 1</td>
+								<td>Teórica</td>
+								<td>-</td>
+								<td>Elaine M</td>
+								<td>14/07/2022</td>
+								<td>08:00</td>
+							</tr>
+							<tr class="linhaBranquinha">
+								<td>Aula 2</td>
+								<td>Prática</td>
+								<td>Categoria A</td>
+								<td>Bruno H</td>
+								<td>15/07/2022</td>
+								<td>11:00</td>
+							</tr>
+							<tr class="linhaRosada">
+								<td>Aula 3</td>
+								<td>Prática</td>
+								<td>Categoria A</td>
+								<td>Elaine M</td>
+								<td>18/07/2022</td>
+								<td>10:00</td>
+							</tr>
+							<tr class="linhaBranquinha">
+								<td>Aula 4</td>
+								<td>Prática</td>
+								<td>Categoria A</td>
+								<td>Bruno H</td>
+								<td>19/07/2022</td>
+								<td>19:00</td>
+							</tr>
+							<tr class="linhaRosada">
+								<td>Aula 5</td>
+								<td>Prática</td>
+								<td>Categoria B</td>
+								<td>Yuri T</td>
+								<td>20/07/2022</td>
+								<td>20:00</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div>
+			<img src="Imagens/LogoAutoescola.png" alt="" width="84">
+		</div>
+		<div class="nomesAlunosFooter">
+			<h3>Bruno Hugo Knaesel, Elaine Martina André e Yuri Trierveiler</h3>
+		</div>
+	</footer>
+
+</body>
+</html>
